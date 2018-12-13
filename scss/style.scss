@@ -31,10 +31,10 @@
       text-decoration: none;
       text-transform: uppercase;
       padding: 17px 23px 18px;
-      box-shadow: -0.3px -2px 35px 0 rgba(0, 1, 1, 0.3);
       font-family: OpenSansBold;
       &:hover {
         background: #ff3f40;
+        box-shadow: -0.3px -2px 35px 0 rgba(0, 1, 1, 0.3);
       }
     }
   }
@@ -186,6 +186,7 @@
   &__persons {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 110px;
   }
   &__mainPersonPhoto {
     flex-basis: 321px;
@@ -210,6 +211,7 @@
       font-size: 16.5px;
       line-height: 1.73;
       font-family: $fontRegular;
+      margin-bottom: 28px;
     }
   }
   &__personChoose {
@@ -221,5 +223,171 @@
     flex-basis: 196.8px;
     height: 214px;
     background-color: #ccc;
+    position: relative;
+    &:hover .team__personName {
+      display: block;
+    }
+  }
+  &__personName {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    font-size: 18.5px;
+    letter-spacing: 0.2px;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: $fontSemiBold;
+  }
+  &__socialLink {
+    font-size: 18px;
+    font-family: $fontItalic;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.9px;
+    text-decoration: none;
+    font-style: italic;
+    display: inline-block;
+    margin-right: 29px;
+  }
+}
+.subscribe {
+  @include sectionMixin(140px, 140px, #f7ecc3, #fff);
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h2 {
+    @include titleMixin(42px, $fontBold, 1.05px);
+    color: #fff;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 31px;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  input[type=email]{
+    padding-left: 36px;
+    height: 79px;
+    outline: none;
+    border: none;
+    width: 521px;
+    max-width: 100%;
+    font-family: $fontRegular;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: rgba(44, 44, 44, 0.7);
+  }
+  input[type=submit]{
+    height: 79px;
+    text-transform: uppercase;
+    font-family: $fontBold;
+    font-size: 18.5px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+}
+.contacts {
+  @include sectionMixin(106px, 110px, transparent, #000);
+
+  h2 {
+    @include titleMixin(41.5px, $fontBold, 0.42px);
+    margin-bottom: 50px;
+  }
+  p {
+    max-width: 720px;
+    margin-bottom: 54px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .redline {
+    margin-bottom: 75px;
+  }
+  &__form {
+    max-width: 720px;
+    textarea, input[type=text], input[type=email] {
+      background-color: rgba(0, 0, 0, 0.1);
+      outline: none;
+      border: none;
+      padding-left: 49px;
+      margin-bottom: 46px;
+      border-radius: 8px;
+      font-size: 15.5px;
+      font-family: $fontRegular;
+    }
+    input {
+      height: 50px;
+    }
+    textarea {
+      resize: none;
+      padding-top: 35px;
+    }
+    input[type=submit], textarea {
+      width: 728px;
+      max-width: 100%;
+      text-transform: uppercase;
+      font-family: $fontBold;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      font-weight: bold;
+    }
+    input[type=text], input[type=email] {
+      width: 330px;
+      max-width: calc(50% - 27px);
+    }
+    input[type=text] {
+      margin-right: 54px;
+    }
+  }
+  &__infoText {
+    background-color: #000;
+    padding-top: 110px;
+    padding-left: 79px;
+    color: #fff;
+    align-self: stretch;
+    padding-right: 80px;
+    h4 {
+      @include titleMixin(18.5px, $fontBold, 0.5px);
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 28px;
+    }
+    p {
+      font-family: $fontRegular;
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 15px;
+      color: rgba(255, 255, 255, 0.8);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+.footer {
+  @include sectionMixin(57px, 37px, #000, #b8b8b8);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .copyright {
+    font-size: 16px;
+    font-family: $fontRegular;
+  }
+  &__socials {
+    
   }
 }
