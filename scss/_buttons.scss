@@ -1,0 +1,26 @@
+.button {
+  background: #ff2d2d;
+  font-family: OpenSansBold;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 5px;
+  display: inline-block;
+  width: 227px;
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 18.5px;
+  line-height: 1.84;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+.red {
+  background: #ff2d2d;
+  color: #fff;
+  border: 1px solid #ff2d2d;
+}
+.light {
+  background-color: #fff;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+}

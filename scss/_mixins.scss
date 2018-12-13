@@ -1,0 +1,18 @@
+@mixin sectionMixin($_padTop, $_padBottom, $_bcgr, $_color) {
+  padding-top: $_padTop;
+  padding-bottom: $_padBottom;
+  background: $_bcgr;
+  color: $_color;
+  font-size: 16.5px;
+  line-height: 1.73;
+  font-family: $fontRegular;
+  font-weight: normal;
+}
+
+@mixin titleMixin($_fSize, $_fFamily, $_letterSpacing) {
+  text-transform: uppercase;
+  color: #000000;
+  font-size: $_fSize;
+  font-family: $_fFamily;
+  letter-spacing: $_letterSpacing;
+}

@@ -1,0 +1,225 @@
+@import '_variables';
+@import '_fonts';
+@import '_reset';
+@import '_mixins';
+@import 'buttons';
+
+.container {
+  width: 1249px;
+  margin: 0 auto;
+  padding: 0;
+}
+.redline {
+  width: 132px;
+  height: 3px;
+  background-color: #ff2d2d;
+}
+.header {
+  @include sectionMixin(29px, 111px, #f6f2f2, rgba(0, 0, 0, 0.7));
+
+  .navbar {
+    background-color: #000;
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    &__item a {
+      display: block;
+      color: #e0e0e0;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 17px 23px 18px;
+      box-shadow: -0.3px -2px 35px 0 rgba(0, 1, 1, 0.3);
+      font-family: OpenSansBold;
+      &:hover {
+        background: #ff3f40;
+      }
+    }
+  }
+  &_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 108px;
+  }
+  &_left {
+    h1 {
+      @include titleMixin(60px, $fontExtraBold, 6px);
+      line-height: 1.2;
+      max-width: 588px;
+    }
+    p {
+      max-width: 512px;
+      margin-top: 28px;
+      margin-bottom: 50px;
+    }
+
+  }
+  &_right {
+    width: 551px;
+    height: 356px;
+    box-shadow: 0 0 5px 5px #000;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.services {
+  @include sectionMixin(114px, 108px, transparent, #000);
+
+  border-bottom: 2px solid #ececec;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.75;
+
+  &_left {
+    flex-basis: 50%;
+
+    h2 {
+      @include titleMixin(42px, $fontBold, 0.4px);
+
+      line-height: 1.3;
+      color: rgba(0, 0, 0, 0.8);
+      max-width: 500px;
+    }
+    p {
+      max-width: 509px;
+      margin-top: 38px;
+      margin-bottom: 46px;
+    }
+  }
+  &_right {
+    flex-basis: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    min-height: 515px;
+  }
+  &__item {
+    flex: 1 1 290px;
+    max-width: 290px;
+    overflow: hidden;
+    h3 {
+      font-family: OpenSansSemiBold;
+      font-size: 24px;
+      letter-spacing: 0.2px;
+      color: rgba(0, 0, 0, 0.7);
+      margin-top: 20px;
+      margin-bottom: 17px;
+    }
+  }
+}
+.feature {
+  @include sectionMixin(106px, 88px, transparent, rgba(0, 0, 0, 0.7));
+
+  display: flex;
+  flex-direction: column;
+  min-height: 358px;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    @include titleMixin(41.5px, $fontBold, 0.4px);
+  }
+  p {
+    max-width: 504px;
+    font-size: 16px;
+    line-height: 1.73;
+    text-align: center;
+  }
+}
+.portfolio {
+  @include sectionMixin(0px, 138.6px, transparent, #000);
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 66.4px;
+
+    a {
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: OpenSansSemiBold;
+      color: #000;
+      padding-right: 59px;
+      &:last-child {
+        padding-right:0;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  &__item {
+      flex-basis: 297.7px;
+      height: 290.2px;
+      overflow: hidden;
+      background: #888;
+      margin-bottom: 19.5px;
+  }
+}
+.team {
+  @include sectionMixin(0px, 110px, transparent, #000);
+
+  &__title {
+    max-width: 446px;
+    h2 {
+      @include titleMixin(41.5px, $fontBold, 0.42px);
+      margin-bottom: 40px;
+    }
+    p {
+      margin-bottom: 33px;
+      line-height: 1.73;
+    }
+  }
+
+  &__persons {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__mainPersonPhoto {
+    flex-basis: 321px;
+    height: 458px;
+    background-color: orange;
+  }
+  &__content {
+    width: 855px;
+    height: 458px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__personInfo {
+    padding-top: 15px;
+    h3 {
+      @include titleMixin(30.5px, $fontSemiBold, 0.31px);
+      margin-bottom: 35px;
+    }
+    p {
+      max-width: 630px;
+      font-size: 16.5px;
+      line-height: 1.73;
+      font-family: $fontRegular;
+    }
+  }
+  &__personChoose {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &__personItem {
+    flex-basis: 196.8px;
+    height: 214px;
+    background-color: #ccc;
+  }
+}
