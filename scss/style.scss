@@ -105,6 +105,14 @@
     flex: 1 1 290px;
     max-width: 290px;
     overflow: hidden;
+    svg {
+      fill: #ff3b4a;
+      width: 40px;
+      height: 40px;
+    }
+    &:hover svg {
+      fill: #000;
+    }
     h3 {
       font-family: OpenSansSemiBold;
       font-size: 24px;
@@ -146,10 +154,17 @@
       text-decoration: none;
       text-transform: uppercase;
       font-family: OpenSansSemiBold;
+      font-weight: 600;
       color: #000;
       padding-right: 59px;
       &:last-child {
         padding-right:0;
+      }
+      &.portfolio__menu_active {
+        color: #ff2d2d;
+      }
+      &:hover {
+        color: #ff2d2d;
       }
     }
   }
@@ -388,6 +403,17 @@
     font-family: $fontRegular;
   }
   &__socials {
-    
+    a {
+      margin-right: 18px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+     img {
+      transition: .5s;
+      &:hover{
+        filter: drop-shadow(0 0 4px #fff);
+      }
+    }
   }
 }
