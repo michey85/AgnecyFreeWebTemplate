@@ -32,6 +32,7 @@
       text-transform: uppercase;
       padding: 17px 23px 18px;
       font-family: OpenSansBold;
+      font-weight: bold;
       &:hover {
         background: #ff3f40;
         box-shadow: -0.3px -2px 35px 0 rgba(0, 1, 1, 0.3);
@@ -50,6 +51,7 @@
       @include titleMixin(60px, $fontExtraBold, 6px);
       line-height: 1.2;
       max-width: 588px;
+      font-weight: 800;
     }
     p {
       max-width: 512px;
@@ -86,6 +88,7 @@
       line-height: 1.3;
       color: rgba(0, 0, 0, 0.8);
       max-width: 500px;
+      font-weight: bold;
     }
     p {
       max-width: 509px;
@@ -116,6 +119,7 @@
     h3 {
       font-family: OpenSansSemiBold;
       font-size: 24px;
+      font-weight: 600;
       letter-spacing: 0.2px;
       color: rgba(0, 0, 0, 0.7);
       margin-top: 20px;
@@ -348,6 +352,8 @@
     textarea {
       resize: none;
       padding-top: 35px;
+      text-transform: none !important;
+      font-weight: normal !important;
     }
     input[type=submit], textarea {
       width: 728px;
